@@ -14,13 +14,6 @@ import Input from '../src/componets/Input';
 import Button from '../src/componets/Button';
 import Link from '../src/componets/Link';
 
-// const BackgroundImage = styled.div`
-//   background-image: url(${db.bg});
-//   flex: 1;
-//   background-size: cover;
-//   background-position: center;
-// `;
-
 export default function Home() {
   const router = useRouter();
   const [name, setName] = useState('');
@@ -46,7 +39,7 @@ export default function Home() {
             <h1>The legend of zelda</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit={function (infosDoEvento) {
+            <form onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
             }}
