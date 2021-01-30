@@ -12,7 +12,3 @@ export default function dbHandler(request, response) {
 
   response.json(db);
 }
-
-export function(request, response) {
-  response.json(db);
-}

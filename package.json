@@ -1,5 +1,5 @@
 {
-  "name": "unnamed-quiz",
+  "name": "flow-quiz",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
