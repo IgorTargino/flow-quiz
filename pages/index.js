@@ -36,7 +36,7 @@ export default function Home() {
           animate="show"
         >
           <Widget.Header>
-            <h1>The legend of zelda</h1>
+            <h1>Quiz do Flow Podcast</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={(infosDoEvento) => {

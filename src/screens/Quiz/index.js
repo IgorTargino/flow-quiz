@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+import Lottie from 'react-lottie';
 
 // import db from '../../db.json';
+import animationData from './loading.json';
 import Widget from '../../componets/Widget';
 import QuizBackground from '../../componets/QuizBackground';
 import QuizContainer from '../../componets/QuizContainer';
@@ -52,6 +54,19 @@ function ResultWidget({ results }) {
 }
 
 function LoadingWidget() {
+  const [animationState, setAnimationState] = useState({
+    isStopped: false, isPaused: false,
+  });
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
+
   return (
     <Widget>
       <Widget.Header>
@@ -59,7 +74,13 @@ function LoadingWidget() {
       </Widget.Header>
 
       <Widget.Content>
-        [Desafio do Loading]
+        <Lottie
+          options={defaultOptions}
+          height={200}
+          width={200}
+          isStopped={animationState.isStopped}
+          isPaused={animationState.isPaused}
+        />
       </Widget.Content>
     </Widget>
   );
@@ -81,7 +102,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow = href"/" /> */}
+        <BackLinkArrow href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
