@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 
-import db from '../db.json';
-import Widget from '../src/componets/Widget';
-import QuizBackground from '../src/componets/QuizBackground';
-import QuizContainer from '../src/componets/QuizContainer';
-import QuizLogo from '../src/componets/QuizLogo';
-import Button from '../src/componets/Button';
-import AlternativeForms from '../src/componets/AlternativeForms';
+import db from '../../db.json';
+import Widget from '../../src/componets/Widget';
+import QuizBackground from '../../src/componets/QuizBackground';
+import QuizContainer from '../../src/componets/QuizContainer';
+import QuizLogo from '../../src/componets/QuizLogo';
+import Button from '../../src/componets/Button';
+import AlternativeForms from '../../src/componets/AlternativeForms';
 
 function ResultWidget({ results }) {
   return (
